@@ -1,12 +1,32 @@
-import React from 'react'
+import styles from "./style";
+import { Navbar, Hero, Stats, Business, Billing, CardDeal, Testimonial , Clients, CTA, Footer } from "./components";
 
 const App = () => (
-  <div className=" bg-blue-200 min-h-screen flex flex-col items-center justify-center">
-    <h1 className='text-4xl font-bold text-purple-700'>Hello, world</h1>
-    <p className='text-lg text-gray-600 mt-4'>Welcome to your React app with Tailwind CSS!</p>
-    <button className='mt-6 px-4 py-2 bg-green-500 text-white rounded hover:bg-purple-600'>
-      click Me
-    </button>
+  <div className=" bg-primary w-full overflow-hidden">
+    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+      <div className={`${styles.boxWidth}`}>
+        <Navbar />
+      </div>
+    </div>
+
+    <div className={`bg-primary ${styles.flexStart}`}>
+      <div className={`${styles.boxWidth}`}>
+        <Hero /> 
+      </div>
+    </div>
+    
+    <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
+      <div className={`${styles.boxWidth}`}>
+        <Stats />
+        <Business />
+        <Billing />
+        <CardDeal />
+        <Testimonial />
+        <Clients />
+        <CTA />
+        <Footer />
+      </div>
+    </div>
   </div>
 );
 
